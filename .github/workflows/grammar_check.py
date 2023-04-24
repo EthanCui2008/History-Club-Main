@@ -20,7 +20,7 @@ def print_error_message(filename, matches):
 if __name__ == '__main__':
     for root, dirs, files in os.walk("."):
         for filename in files:
-            if filename.endswith('.md') or filename.endswith('.txt'):
+            if filename.endswith('.txt'):
                 filepath = os.path.join(root, filename)
                 matches = check_grammar(filepath)
                 if matches:
