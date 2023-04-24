@@ -1,4 +1,5 @@
 import language_tool_python
+import os
 
 tool = language_tool_python.LanguageTool('en-US')
 
@@ -7,15 +8,21 @@ def check_grammar(filename):
         text = f.read()
 
     matches = tool.check(text)
-    return len(matches)
+    return matches
 
-# Check the grammar of all .md files in the repository
+def print_error_message(filename, matches):
+    print(f"Grammar check failed for file: {filename}")
+    for match in matches:
+        print(f"Error at line {match.line}: {match.message}")
+        print(f"Context: {match.context}\n")
+
+# Check the grammar of all .md and .txt files in the repository
 if __name__ == '__main__':
-    import os
     for root, dirs, files in os.walk("."):
         for filename in files:
-            if filename.endswith('.md'):
-                num_errors = check_grammar(os.path.join(root, filename))
-                if num_errors > 0:
-                    print(f"Grammar check failed for file: {filename}")
+            if filename.endswith('.md') or filename.endswith('.txt'):
+                filepath = os.path.join(root, filename)
+                matches = check_grammar(filepath)
+                if matches:
+                    print_error_message(filepath, matches)
                     exit(1)
