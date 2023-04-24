@@ -9,6 +9,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Run grammar check
-      uses: The-History-Club/Mr.Grammar@v1.0
+      uses: The-History-Club/Mr.Grammar@v1.1
       with:
         path: .
