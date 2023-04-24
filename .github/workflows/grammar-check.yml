@@ -1,0 +1,14 @@
+name: Grammar Check
+on:
+  push:
+    branches: [main]
+jobs:
+  grammar-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Run grammar check
+      uses: The-History-Club/Mr.Grammar@v1
+      with:
+        path: .
