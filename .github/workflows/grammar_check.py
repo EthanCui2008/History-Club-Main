@@ -13,7 +13,7 @@ def check_grammar(filename):
 def print_error_message(filename, matches):
     print(f"Grammar check failed for file: {filename}")
     for match in matches:
-        print(f"Error at line {match.line}: {match.message}")
+        print(f"Error at offset {match.offset}: {match.message}")
         print(f"Context: {match.context}\n")
 
 # Check the grammar of all .md and .txt files in the repository
