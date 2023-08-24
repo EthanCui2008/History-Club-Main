@@ -48,3 +48,10 @@ The members of the club may establish a code of club regulation to govern the co
 
 <h2>Article VI: Amendments</h2>
 Members of the club may proposed amendments to this charter.Any proposed amendments must first go through the prosess of Request For Comments (RFCs). Such process will last no less than 21 days and the author should consider the public comments and make necessary modifications to the proposed changes. The auther of the RFC has the right to request for a final vote, the request for final vote should be sumbitted no less than 12 days before a club meeting. The proposed change will be adoped by a 2/3 majourity vote. And changes will be made to this charter according to the proposal.<p>
+  
+<h2>Article V: Starter Roles</h2>
+1.President: Woojin<br>
+2. Vice President: Eason<br>
+3. Secretary: Ethan<br>
+4. Treasurer: Ethan<br>
+<p>
